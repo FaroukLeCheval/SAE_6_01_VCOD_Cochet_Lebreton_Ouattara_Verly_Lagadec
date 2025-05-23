@@ -299,7 +299,7 @@ async def handle_tournament_standings_page(
   with open(output_file, "w") as f:
     json.dump(asdict(tournament), f, indent=2)
 
-first_tournament_page = "/tournaments/completed?game=POCKET&format=STANDARD&platform=all&type=online&time=all" #&page=53"
+first_tournament_page = "/tournaments/completed?game=POCKET&format=STANDARD&platform=all&type=online&time=all"
 regex_standings_url = re.compile(r'/tournament/[a-zA-Z0-9_\-]*/standings')
 async def handle_tournament_list_page(session: aiohttp.ClientSession, sem: asyncio.Semaphore, url: str):
   soup = await async_soup_from_url(session, sem, url, False)

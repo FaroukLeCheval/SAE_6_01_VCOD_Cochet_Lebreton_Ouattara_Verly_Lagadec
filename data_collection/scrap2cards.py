@@ -128,7 +128,7 @@ def scrape_card_info(url, session):
                         attack_text = attack_text[len(symbol_text):].strip()
                 
                 # Pattern corrigé - le "-" doit être à la fin ou échappé
-                match = re.match(r'^([A-Za-z\s]+?)(?:\s+(\d+[+x\-]?))?$', attack_text)
+                match = re.match(r'^([A-Za-z\s\-\',]+?)(?:\s+(\d+[+x\-]?))?$', attack_text)
                 
                 if match:
                     attack_name = match.group(1).strip()
@@ -251,7 +251,7 @@ def save_results(cards_data, failed_urls, output_dir="scraped_data"):
         print(f"   Autres: {len(cards_data) - trainers - pokemon}")
 
 def main():
-    directory_path = r"H:\TGCPocket\data_collection\sample_output"
+    directory_path = r"D:\data_collection\data_collection\output"
     
     print("Extraction des URLs depuis les fichiers JSON...")
     

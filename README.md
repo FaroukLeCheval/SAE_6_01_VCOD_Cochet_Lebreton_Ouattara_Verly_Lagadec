@@ -64,12 +64,6 @@ export POSTGRES_USER=postgres
 export POSTGRES_PASSWORD='keepThis$ecret'
 export POSTGRES_HOST=localhost
 export POSTGRES_PORT=5432
-
-set POSTGRES_DB=postgres
-set POSTGRES_USER=postgres
-set POSTGRES_PASSWORD='keepThis$ecret'
-set POSTGRES_HOST=localhost
-set POSTGRES_PORT=5432
 python3 main.py
 ```
 

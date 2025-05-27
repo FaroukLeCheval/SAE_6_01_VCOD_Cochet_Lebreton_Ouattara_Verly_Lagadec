@@ -16,25 +16,5 @@ CREATE TABLE public.wrk_decklists (
   card_type varchar NULL,
   card_name varchar NULL,
   card_url varchar NULL,
-  card_saison varchar NULL,
-  card_booster varchar NULL,
   card_count int NULL
 );
-
-DROP TABLE IF EXISTS public.wrk_infocards;
-CREATE TABLE public.wrk_infocards (
-  url varchar NULL,
-  nom varchar NULL,
-  type_carte varchar NULL,
-  sous_type varchar NULL,
-  hp int NULL,
-  evolving_stage varchar NULL,
-  evolves_from varchar NULL,
-  competence_1_nom varchar NULL,
-  competence_1_puissance varchar NULL,
-  competence_2_nom varchar NULL,
-  competence_2_puissance varchar NULL,
-  faiblesse varchar NULL,
-  retreat int NULL
-);
-
